@@ -1,0 +1,14 @@
+extends ../layout
+block content
+	.container
+		include ../nav
+		h1.text-center Editar foto
+		.row
+			.col-md-6.col-md-offset-3
+				form(action="/app/fotos/" + foto._id + "?_method=PUT", method="post")
+					.form-group
+						label(for="#title") Titulo
+						input(type="text", class="form-control", placeholder="Titulo", name="title", id="title", value= foto.title)
+					.form-group
+						button(type="submit" class="btn btn-success") Actualizar
+						a(href="/app" class="pull-right") Volver

@@ -1,0 +1,36 @@
+{
+  "name": "fotos",
+  "version": "1.0.0",
+  "description": "Practica genial de lo que aprendi en el curso de NodeJS de codigofacilito",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davixe7/fotos.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "codigofacilito"
+  ],
+  "author": "David",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Davixe7/fotos/issues"
+  },
+  "homepage": "https://github.com/Davixe7/fotos#readme",
+  "dependencies": {
+    "connect-redis": "^3.1.0",
+    "cookie-session": "^2.0.0-alpha.1",
+    "express": "^4.14.0",
+    "express-formidable": "^1.0.0",
+    "express-session": "^1.14.2",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.6.6",
+    "pug": "^2.0.0-beta6",
+    "redis": "^2.6.3",
+    "socket.io": "^1.5.1"
+  }
+}

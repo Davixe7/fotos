@@ -1,0 +1,20 @@
+extends ../layout.pug
+block content
+	include ../nav
+	.container
+		h1.text-center Echale un vistazo a tu foto
+		.row
+			.col-md-6.col-md-offset-3.text-center
+				if foto.author._id.toString() == user._id
+					.btn-group.owner-menu
+						a(type="button" class="btn btn-default btn-xs" href="/app/fotos/"+foto.id+"/edit")
+							span.glyphicon.glyphicon-edit
+						form(action="/app/fotos/"+foto._id+"/?_method=DELETE", method="POST")
+							button(type="submit" class="btn btn-default btn-xs")
+								span.glyphicon.glyphicon-trash
+				else
+					p= foto.author._id + '|' + user._id
+				img(src="/imagenes/"+foto._id+"."+foto.extension, style="width: 400px; height: 400px;")
+				h3= foto.title
+				small
+					i= foto.author.username

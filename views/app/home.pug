@@ -1,0 +1,20 @@
+extends ../layout.pug
+block content
+	.container-fluid
+		include ../nav.pug
+	h1.text-center ¡Bienvenido a la app!
+	.container
+		#img-container.row
+			each foto in fotos
+				.main-photo-frame.col-sm-3
+					h3= foto.title
+					a(href="/app/fotos/" + foto._id)
+						img(src="/imagenes/" + foto._id + "." + foto.extension, class="main-photo")
+					p.text-right Por #[i= foto.author.username]
+			script(id="img-template" type="text-x-handlebars-template")
+				.main-photo-frame.col-sm-3
+					h3 {{title}}
+					a(href="/app/fotos/{{id}}")
+						img(src="/imagenes/{{id}}.{{extension}}")
+					p.text-right Por {{author}}
+	script(src="/js/client.js")

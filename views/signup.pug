@@ -1,0 +1,22 @@
+extends layout.pug
+block content
+	.container
+		h1.text-center Registrate
+		.row
+			.col-md-6.col-md-offset-3
+				form(action="/users" method="post")
+					.form-group
+						label(for="#username") Username
+						input(type="text" class="form-control" placeholder="Username" name="username" id="username")
+					.form-group
+						label(for="#email") Email
+						input(type="email" class="form-control" placeholder="Email" name="email" id="email")
+					.form-group
+						label(for="#password") Password
+						input(type="password" class="form-control" placeholder="Password" name="password" id="password")
+					.form-group
+						label(for="#password_2") Password confirm
+						input(type="password" class="form-control" placeholder="Password confirm" name="password_2" id="password_2")
+					.form-group
+						button(type="submit" class="btn btn-success") Registrate
+						a(href="/login" class="pull-right") Ya tengo cuenta
